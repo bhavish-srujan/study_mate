@@ -1,0 +1,33 @@
+services:
+  studymate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: studymate-ai:latest
+    container_name: studymate-ai
+    init: true
+    ports:
+      - "${STUDYMATE_PORT:-8501}:8501"
+    env_file:
+      - .env
+    environment:
+      # Keep all mutable state on the named volume, not in the image layer.
+      CHROMA_DIR: /app/data/chroma
+      SQLITE_PATH: /app/data/studymate.db
+      HF_HOME: /app/data/huggingface
+      TRANSFORMERS_CACHE: /app/data/huggingface
+      SENTENCE_TRANSFORMERS_HOME: /app/data/huggingface
+      EMBEDDING_DEVICE: cpu
+    volumes:
+      - studymate_data:/app/data
+    restart: unless-stopped
+    shm_size: "1gb"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+
+volumes:
+  studymate_data:

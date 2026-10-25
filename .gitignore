@@ -1,0 +1,30 @@
+prd.txt
+PROJECT_CONTEXT.md
+# Secrets and local data
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Indexed vectors, quiz database, uploads
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
