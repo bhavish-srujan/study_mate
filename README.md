@@ -1,6 +1,6 @@
 # StudyMate AI
 
-A beginner-friendly RAG application that turns your own study material into
+A RAG application that turns your own study material into
 grounded chat answers and practice questions. Built with Streamlit, PyMuPDF,
 local sentence-transformer embeddings, ChromaDB, and an LLM.
 
