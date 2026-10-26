@@ -332,11 +332,3 @@ tests/                     Chunker, ingestion, YouTube, indexer, vector-store,
   is intended for local use; do not expose it publicly without a private tunnel
   or an authenticating reverse proxy.
 
-## Documentation
-
-- [`prd.txt`](prd.txt) — original product requirements (note: the file is
-  truncated partway through section 8.3).
-- [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md) — decisions, architecture, data
-  models, phases, and acceptance criteria.
-- [`DOCKER.md`](DOCKER.md) — Docker setup, data persistence, sharing the app with
-  a friend, and troubleshooting.
