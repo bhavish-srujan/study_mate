@@ -4,15 +4,6 @@ A beginner-friendly RAG application that turns your own study material into
 grounded chat answers and practice questions. Built with Streamlit, PyMuPDF,
 local sentence-transformer embeddings, ChromaDB, and an LLM.
 
-> **Status: Phase 6 complete; YouTube transcripts and grounded chat ready.**
-> PDF, pasted-note, and YouTube transcript ingestion, chunking, local
-> embeddings, persistent ChromaDB storage, the resource library UI,
-> resource-filtered retrieval, grounded chat, validated question generation,
-> interactive quiz taking, scoring, and post-submit answer review are
-> implemented. Index your material, ask the chatbot questions, or take a quiz
-> and review your score with correct answers, explanations, and source
-> references. See [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
-
 ---
 
 ## What works today
